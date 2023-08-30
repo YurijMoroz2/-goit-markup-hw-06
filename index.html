@@ -5,34 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebStudio</title>
+    <title>WebStudio2</title>
+
     <!-- Modern-normalize -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" />
 
     <!-- Gustom styles -->
     <link rel="stylesheet" href="./css/styles.css">
-    <!-- Fonts -->
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
-
-
 </head>
 
 <body>
-
-    <!--header-->
+    <!-- heder -->
     <header class="head">
-        <!--Top-Line-->
-        <!--Logo-->
-        <!--Menu-Nav-->
         <div class="heder container">
 
             <nav class="navig vig">
-
                 <a class="logo link" href="./index.html">Web<span class="logo-title">Studio</span></a>
 
                 <ul class="nav-page list">
@@ -46,7 +40,13 @@
                         <a class="nav-page-pagination link" href="">Contacts</a>
                     </li>
                 </ul>
+
             </nav>
+            <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="charm-menu" width="32" height="22">
+                    <use href="./images/icons.svg#icon-charm_menu-hamburger"></use>
+                </svg>
+            </button>
             <address class="gmail">
                 <ul class="add-page list">
                     <li><a class="add-page-mailto link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
@@ -56,7 +56,6 @@
         </div>
 
     </header>
-
     <!--main-content-->
     <main>
 
@@ -137,13 +136,17 @@
                 <h2 class="subject">What are we doing</h2>
                 <ul class="subject-img list">
                     <li class="subject-item">
-                        <img src="./images/img1.jpg" alt="A monitor with images of graphs" width="360" />
+                        <img srcset="./images/responsive/rectangle71.jpg 1x, ./images/responsive/rectangle71@2x.jpg 2x"
+                            src="./images/responsive/rectangle71.jpg" alt="A monitor with images of graphs" width="360"
+                            loading="lazy" />
                     </li>
                     <li class="subject-item">
-                        <img src="./images/img2.jpg" alt="Smartphone" width="360" />
+                        <img srcset="./images/responsive/rectangle711.jpg 1x, ./images/responsive/rectangle711@2x.jpg 2x"
+                            src="./images/responsive/rectangle711.jpg" alt="Smartphone" width="360" loading="lazy" />
                     </li>
                     <li class="subject-item">
-                        <img src="./images/img3.jpg" alt="Smartphone in hand" width="360" />
+                        <img srcset="./images/responsive/img33.jpg 1x, ./images/responsive/img33@2x.jpg 2x"
+                            src="./images/responsive" alt="Smartphone in hand" width="360" loading="lazy" />
                     </li>
                 </ul>
             </div>
@@ -156,7 +159,8 @@
                 <h2 class="subject">Our Team</h2>
                 <ul class="subject-foto list">
                     <li class="liimg">
-                        <img src="./images/img11.jpg" alt="foto Mark Guerrero" width="264" />
+                        <img srcset="./images/responsive/img1.jpg 1x, ./images/responsive/img1@2x.jpg 2x"
+                            src="./images/responsive/img1.jpg" alt="foto Mark Guerrero" width="264" />
 
                         <div class="liimg-box">
                             <h3 class="subject-title">Mark Guerrero</h3>
@@ -192,7 +196,8 @@
                         </div>
                     </li>
                     <li class="liimg">
-                        <img src="./images/img21.jpg" alt="foto Tom Ford" width="264" />
+                        <img srcset="./images/responsive/img2.jpg 1x, ./images/responsive/img2@2x.jpg 2x"
+                            src="./images/responsive/img2.jpg" alt="foto Tom Ford" width="264" />
                         <div class="liimg-box">
                             <h3 class="subject-title">Tom Ford</h3>
                             <p class="subject-text">Frontend Developer</p>
@@ -226,7 +231,8 @@
                         </div>
                     </li>
                     <li class="liimg">
-                        <img src="./images/img31.jpg" alt="foto Camila Garcia" width="264" />
+                        <img srcset="./images/responsive/img3.jpg 1x, ./images/responsive/img3@2x.jpg 2x"
+                            src="./images/responsive/img3.jpg" alt="foto Camila Garcia" width="264" />
                         <div class="liimg-box">
                             <h3 class="subject-title">Camila Garcia</h3>
                             <p class="subject-text">Marketing</p>
@@ -260,7 +266,8 @@
                         </div>
                     </li>
                     <li class="liimg">
-                        <img src="./images/img41.jpg" alt="foto Daniel Wilson" width="264" />
+                        <img srcset="./images/responsive/img4.jpg 1x, ./images/responsive/img4@2x.jpg 2x"
+                            src="./images/responsive/img4.jpg" alt="foto Daniel Wilson" width="264" />
                         <div class="liimg-box">
                             <h3 class="subject-title">Daniel Wilson</h3>
                             <p class="subject-text">UI Designer</p>
@@ -297,6 +304,7 @@
                 </ul>
             </div>
         </section>
+
         <!--Section-5-->
         <section class="customers">
             <div class="container ">
@@ -330,7 +338,6 @@
             </div>
         </section>
     </main>
-
     <!--footer-->
     <footer class="footbox ">
         <div class="container footcontainer ">
@@ -460,7 +467,71 @@
         </div>
 
     </div>
+
+    <!-- Modal-mobile-menu -->
+
+    <div class="menu-container js-menu-container is-open" id="mobile-menu">
+        <div class="mobile-modal">
+            <button class="mobile-modal-btn js-close-menu" type="button">
+                <svg class="mobile-modal-btn-icon svg-icon" width="8" height="8">
+                    <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
+                </svg>
+            </button>
+            <nav class="vigo">
+                <ul class="menu-nav-page list">
+                    <li class="menu-nav-page-item lob">
+                        <a class="menu-nav-page-pagination link lok" href="./index.html">Studio</a>
+                    </li>
+                    <li class="menu-nav-page-item lob">
+                        <a class="menu-nav-page-pagination link" href="./portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="menu-nav-page-item lob">
+                        <a class="menu-nav-page-pagination link" href="">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+            <address class="menu-gmail">
+                <ul class="menu-add-page list">
+                    <li><a class="menu-add-page-mailto link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                    <li><a class="menu-add-page-mailto link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+                </ul>
+            </address>
+            <div class="">
+                <ul class="mobile-modal-list-icon list">
+                    <li class="subject-item-icon">
+                        <a class="foot-social-links link" href="https://www.instagram.com/">
+                            <svg class="subject-icon-svg" width="24" height="24">
+                                <use href="./images/icons.svg#icon-instagram-2-hdr"></use>
+                            </svg></a>
+                    </li>
+                    <li class="subject-item-icon">
+                        <a class="foot-social-links link" href="https://twitter.com/">
+                            <svg class="subject-icon-svg" width="24" height="24">
+                                <use href="./images/icons.svg#icon-twitter-1-hdr"></use>
+                            </svg></a>
+                    </li>
+                    <li class="subject-item-icon">
+                        <a class="foot-social-links link" href="https://www.facebook.com/">
+                            <svg class="subject-icon-svg" width="24" height="24">
+                                <use href="./images/icons.svg#icon-facebook-1-hdr"></use>
+                            </svg></a>
+                    </li>
+                    <li class="subject-item-icon">
+                        <a class="foot-social-links link" href="https://inkedin.com/">
+                            <svg class="subject-icon-svg" width="24" height="24">
+                                <use href="./images/icons.svg#icon-linkedin-1-hdr"></use>
+                            </svg></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 
 </body>
 
