@@ -105,9 +105,6 @@ ul {
   display: flex;
   align-items: center;
 }
-.navig .logo {
-  margin-right: 76px;
-}
 @media screen and (min-width: 768px) and (max-width: 1157.98px) {
   .navig .logo {
     margin-right: 120px;
@@ -435,6 +432,12 @@ ul {
   max-width: 320px;
   margin: 0 auto 72px;
 }
+@media screen and (max-width: 350px) {
+  .hero-title {
+    font-size: 30px;
+    margin-bottom: 85px;
+  }
+}
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
@@ -468,6 +471,12 @@ ul {
         var(--herobackground-grey-color)
       ),
       url(../images/responsive/dark-bgtab@2x.jpg);
+  }
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    min-width: 496px;
+    margin-bottom: 36px;
   }
 }
 /* desctop */
